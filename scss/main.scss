@@ -1,0 +1,66 @@
+@import 'variables';
+@import 'function';
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: $lite_clr;
+    color: $dark_clr;
+    font-family: $font;
+    line-height: 1.5;
+}
+
+header {
+    background: $dark_clr;
+    color: $lite_clr;
+    padding: 1rem;
+
+    h1 {
+        text-align: center;
+    }
+}
+
+.section {
+    padding: 3rem;
+
+    h3 {
+        font-size: 2rem;
+    }
+
+    &-a {
+        background: $pri_clr;
+        color: #fff;
+    }
+
+    &-b {
+        background: $sec_clr;
+        color: #fff;
+    }
+}
+
+%btn-shared {
+    display: inline-block;
+    padding: 0.7rem 2rem;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 1rem;
+}
+
+.btn {
+    &-light {
+        @extend %btn-shared;
+        background: $lite_clr;
+        color: #333
+    }
+
+    &-dark {
+        @extend %btn-shared;
+        background: $dark_clr;
+        color: #fff;
+    }
+}
